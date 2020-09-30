@@ -1,0 +1,196 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(145deg, #e0e0e0, #bcbcbc);
+  font-family: "Arvo";
+}
+
+.clock_ {
+  font-size: 50px;
+  text-align: center;
+  margin-bottom: 35px;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.clock_ span {
+  color: red;
+}
+
+.container {
+  display: block;
+  width: 650px;
+  height: 200px;
+  position: relative;
+  z-index: 2;
+}
+
+.container:after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  width: 85%;
+  height: 60px;
+  border-radius: 50%;
+  bottom: 10px;
+  -webkit-box-shadow: 0 30px 20px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 30px 20px rgba(0, 0, 0, 0.3);
+  z-index: -1;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.container .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 42px;
+  background: #d1d1d1;
+  -webkit-box-shadow: inset 1px 1px 2px #545454, inset -1px -1px 2px #ffffff;
+          box-shadow: inset 1px 1px 2px #545454, inset -1px -1px 2px #ffffff;
+  overflow: hidden;
+}
+
+.container .row .days_ {
+  width: 40%;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container .row .days_ .date_ {
+  font-weight: bold;
+  font-size: 70px;
+  display: block;
+  letter-spacing: 2px;
+}
+
+.container .row .days_ .month_ {
+  text-transform: uppercase;
+  font-size: 15px;
+  margin-top: 10px;
+}
+
+.container .row .time {
+  width: 60%;
+  background-color: rgba(255, 255, 255, 0.3);
+  height: 100%;
+  color: #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container .row .time .current_time {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 60px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .row .time .current_time .seperator_ {
+  width: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .row .time .current_time .time_item {
+  width: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .row .time .current_time .hour_ {
+  font-weight: bold;
+}
+
+.container .row .time .current_time .min_,
+.container .row .time .current_time .sec_ {
+  font-weight: 400;
+}
+
+.container .row .time .current_time .ampm {
+  font-size: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  margin-left: 10px;
+  width: 30px;
+}
+
+.container .row .time .day {
+  margin-top: 15px;
+  text-transform: uppercase;
+}
+/*# sourceMappingURL=style.css.map */

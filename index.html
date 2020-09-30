@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Clock</title>
+    <link rel="stylesheet" href="css/font.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <h2 class="clock_">JavaScript <span>Clock</span></h2>
+    <div class="container">
+        <div class="row">
+            <div class="days_">
+                <div class="date_"></div>
+                <div class="month_"></div>
+            </div>
+            <div class="time">
+                <div class="current_time">
+                    <div class="time_item hour_"></div>
+                    <div class="seperator_">:</div>
+                    <div class="time_item min_"></div>
+                    <div class="seperator_">:</div>
+                    <div class="time_item sec_"></div>
+                    <div class="ampm"></div>
+                </div>
+                <div class="day"></div>
+            </div>
+        </div>
+    </div>
+    <script>
+        //Month       
+        let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December",];
+        //Days
+        let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thrusday", "Friday", "Saturday"];
+
+        //Define function for current time
+        function realTime() {
+            let time = new Date();
+            let hours = time.getHours();
+            let minutes = time.getMinutes();
+            let seconds = time.getSeconds();
+            let amPm = "";
+
+            amPm = hours >= 12 ? 'pm' : 'am';
+            hours = hours % 12;
+            hours = hours ? hours : 12;
+
+            hours = hours >= 10 ? hours : '0' + hours;
+            minutes = minutes >= 10 ? minutes : '0' + minutes;
+            seconds = seconds >= 10 ? seconds : '0' + seconds;
+
+            document.querySelector(".month_").innerHTML = months[time.getMonth()];
+            document.querySelector(".day").innerHTML = days[time.getDay()];
+            document.querySelector(".date_").innerHTML = time.getDate();
+            document.querySelector(".hour_").innerHTML = hours;
+            document.querySelector(".min_").innerHTML = minutes;
+            document.querySelector(".sec_").innerHTML = seconds;
+            document.querySelector(".ampm").innerHTML = amPm;
+        }
+        let final_time = setInterval(realTime, 1000);
+    </script>
+
+</body>
+
+</html>
